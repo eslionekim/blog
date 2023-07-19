@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>글쓰기</title>
+	<link rel="stylesheet" href="{% static 'todo/bootstrap/bootstrap.min.css' %}">
+</head>
+<body>
+	<h1>글쓰기</h1>
+	<hr/>
+	<form method='post' enctype="multipart/form-data">
+		{% csrf_token %}
+		<table>
+			<tbody>
+				<tr>
+					<th><label for="title">title:</label></th>
+					<td><input type="text" name="title" maxlength="30" required="" id="title"></td>
+				</tr>
+                <tr>
+					<th><label for="subtitle">subtitle:</label></th>
+					<td><input type="text" name="subtitle" maxlength="30" required="" id="subtitle"></td>
+				</tr>
+				<tr>
+					<th><label for="content">content:</label></th>
+					<td><textarea name="content" cols="40" rows="10" required="" id="content"></textarea></td>
+				</tr>
+				</tbody>
+			</table>
+			<button type="submit" class="btn btn-primary" style="margin-left: 350px;">올리기</button>
+	</form>
+</body>
+</html>

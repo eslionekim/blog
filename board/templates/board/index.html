@@ -1,0 +1,18 @@
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>board</title>
+</head>
+<body>
+	<h1>board</h1>
+	{% for board in boardlist %}
+    <hr/>
+	<h3> {{ board.title }} </h3>
+	<h2> {{ board.subtitle}} </h2>
+	<p> {{ board.user_id }} </p>
+	<p> {{ board.time }} </p>
+	<p> {{ board.content }} </p>
+
+	{% endfor %}
+</body>
+</html>
