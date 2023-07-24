@@ -57,6 +57,10 @@
                             <h2 class="fw-bolder mb-1">{{ board.subtitle }}</h2>
                             <!-- 시간대 -->
                             <div class="text-muted fst-italic mb-2">{{board.time}}</div>
+                            <!--수정-->
+                            <h5 class="mb-0"><a href="{% url 'update' board.pk %}" role="button" class="badge bg-secondary" style="text-decoration-line: none;">수정하기</a></h6>
+                            <!--삭제-->
+                            <h5 class="mb-0"><a href="{% url 'delete' board.pk %}" role="button" class="badge bg-secondary" data-bs-toggle="tooltip" data-bs-title="Remove" style="text-decoration-line: none;">삭제</a></h6>
                             <!-- 분야를 넣을까 말까 고민중 ex) 스포츠, 공부, 음악
                             <a class="badge bg-secondary text-decoration-none link-light" href="#!">Web Design</a>
                             <a class="badge bg-secondary text-decoration-none link-light" href="#!">Freebies</a>
